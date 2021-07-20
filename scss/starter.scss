@@ -1,0 +1,225 @@
+// Override Bootstrap's Sass default variables
+//
+// Nearly all variables in Bootstrap are written with the `!default` flag.
+// This allows you to override the default values of those variables before
+// you import Bootstrap's source Sass files.
+//
+// Overriding the default variable values is the best way to customize your
+// CSS without writing _new_ styles. For example, change you can either change
+// `$body-color` or write more CSS that override's Bootstrap's CSS like so:
+// `body { color: red; }`.
+
+
+//
+// Bring in Bootstrap
+//
+
+// Option 1
+//
+// Import all of Bootstrap's CSS
+
+ @import "bootstrap/scss/bootstrap";
+ @import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
+
+// Option 2
+//
+// Place variable overrides first, then import just the styles you need. Note that some stylesheets are required no matter what.
+
+// Toggle global options
+$enable-gradients: true;
+$enable-shadows: true;
+
+// Customize some defaults
+$body-color: #333;
+$body-bg: #333;
+$bg-primary: #333;
+$border-radius: .4rem;
+$success: #7952b3;
+
+/*
+@import "bootstrap/scss/functions"; // Required
+@import "bootstrap/scss/variables"; // Required
+@import "bootstrap/scss/mixins"; // Required
+
+@import "bootstrap/scss/root"; // Required
+@import "bootstrap/scss/reboot"; // Required
+@import "bootstrap/scss/type";
+ @import "bootstrap/scss/images";
+ @import "bootstrap/scss/code";
+@import "bootstrap/scss/grid";
+ @import "bootstrap/scss/tables";
+ @import "bootstrap/scss/forms";
+@import "bootstrap/scss/buttons";
+@import "bootstrap/scss/transitions";
+ @import "bootstrap/scss/dropdown";
+ @import "bootstrap/scss/button-group";
+ @import "bootstrap/scss/input-group"; // Requires forms
+ @import "bootstrap/scss/custom-forms";
+ @import "bootstrap/scss/nav";
+ @import "bootstrap/scss/navbar"; // Requires nav
+ @import "bootstrap/scss/card";
+ @import "bootstrap/scss/breadcrumb";
+ @import "bootstrap/scss/pagination";
+// @import "bootstrap/scss/badge";
+// @import "bootstrap/scss/jumbotron";
+// @import "bootstrap/scss/alert";
+// @import "bootstrap/scss/progress";
+// @import "bootstrap/scss/media";
+ @import "bootstrap/scss/list-group";
+@import "bootstrap/scss/close";
+// @import "bootstrap/scss/toasts";
+@import "bootstrap/scss/modal"; // Requires transitions
+// @import "bootstrap/scss/tooltip";
+// @import "bootstrap/scss/popover";
+// @import "bootstrap/scss/carousel";
+// @import "bootstrap/scss/spinners";
+@import "bootstrap/scss/utilities";
+// @import "bootstrap/scss/print";
+*/
+
+//
+// Custom styles
+//
+
+@import "icon-list";
+
+.intro {
+    display: table;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    text-align: center;
+    color: #fff;
+    background: url(/assets/images/intro_portrait2.png) no-repeat 50% 80% scroll;
+    background-color: #000000;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+
+.intro-body {
+  vertical-align: middle;
+  display: table-cell;
+  -webkit-text-size-adjust: 100%;
+  box-sizing: border-box;
+ 
+  padding-top: 475px;
+  padding-bottom: 250px;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+body {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: rgb(226, 226, 226);
+  background-color: #0d0d0e;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 35px;
+  text-transform: uppercase;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.name-heading {
+  margin-top: 150px;
+  font-size: 60px;
+  display: block;
+  box-sizing: border-box;
+  margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+// Style Bootstrap icons
+.bi {
+  fill: currentColor;
+}
+
+.t-container {
+  display: block;
+  /* Remove horizontal 'justify-content' center if you want the base text not to move */
+  /*justify-content: center;*/
+  align-items: center;
+}
+
+/* ADD CURSOR */
+.txt-type > .txt {
+  border-right: 0.14rem solid #fff;
+  padding-right: 2px;
+  color: rgb(174, 150, 73);
+  /* Animating the cursor */
+  animation: blink 0.7s infinite;
+  font-family: 'Crimson Text', serif;
+}
+
+.about-text {
+  font-size: 22px;
+}
+
+.navbar-nav{
+  float: right!important;
+}
+
+.nav-link {
+  color: white;
+  font-size: 20px;
+  font-family: 'Crimson Text', serif;
+  
+}
+footer > .container-fluid {
+  background-color: rgb(81, 81, 81);
+  font-family:'Courier New', Courier, monospace;
+  font-size: 16px;
+  align-items: center;
+  
+}
+.skill-images {
+  
+  max-height: 100%;
+  max-width: 100%;
+  
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.tech > .container {
+  display:block;
+  max-width: 750px;
+  
+}
+.about-me {
+box-sizing:border-box;
+margin-left: auto;
+margin-right: auto;
+padding-left: 15px;
+padding-right: 15px;
+text-align: center;
+line-height: 35px;
+display:block;
+max-width: 750px;
+font-family: 'Crimson Text', serif;
+}
+
+/* ANIMATION */
+@keyframes blink {
+  0% {
+    border-right: 0.14rem solid rgba(0, 0, 0, 0);
+  }
+
+  100% {
+    border-right: 0.14rem solid rgba(0, 0, 0, 0);
+  }
+}
