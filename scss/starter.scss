@@ -91,7 +91,7 @@ $success: #7952b3;
     padding: 0;
     text-align: center;
     color: #fff;
-    background: url(/assets/images/intro_portrait2.png) no-repeat 50% 80% scroll;
+    background: url(/assets/images/intro_portrait2_compressed.jpg) no-repeat 50% 80% scroll;
     background-color: #000000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -191,7 +191,7 @@ footer > .container-fluid {
   
 }
 :hover.skill-images {
-  animation: pulse 2s;
+  animation: pulse 1s;
 }
 .skill-images {
   
@@ -206,6 +206,10 @@ footer > .container-fluid {
   display:block;
   max-width: 750px;
   
+}
+
+:hover .navbar-brand {
+  animation: pulse 1s;
 }
 .about-me {
 box-sizing:border-box;
