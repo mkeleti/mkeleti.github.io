@@ -35,6 +35,22 @@ $body-bg: #333;
 $bg-primary: #333;
 $border-radius: .4rem;
 $success: #7952b3;
+$theme-colors: (
+  "primary": #0074d9,
+  "danger": #ff4136,
+  "dark": #000,
+);
+.gradient-custom {
+  /* fallback for old browsers */
+  background: #000000;
+
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to bottom, #0d0d0d 50%, #743B66);
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to bottom, #0d0d0d 50%, #743B66)
+
+}
 
 
 
@@ -93,6 +109,7 @@ $success: #7952b3;
     color: #fff;
     background: url(/assets/images/intro_portrait2_compressed.webp) no-repeat 50% 80% scroll;
     background-color: #000000;
+    
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -122,7 +139,7 @@ body {
   font-size: 14px;
   line-height: 1.42857143;
   color: rgb(226, 226, 226);
-  background-color: #0d0d0e;
+
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -184,11 +201,14 @@ h1, h2, h3, h4, h5, h6 {
   
 }
 footer > .container-fluid {
-  background-color: rgb(81, 81, 81);
+  background-color: #31192b;
   font-family:'Courier New', Courier, monospace;
   font-size: 16px;
   align-items: center;
   
+}
+.opacity-0 {
+  opacity: 0%;
 }
 :hover.skill-images {
   animation: pulse 1s;
